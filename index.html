@@ -3,10 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock paper scissors Game</title>
     <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-   <h1>Rock paper scissors</h1>
+   <h1 class="Title">Rock paper scissors Game</h1> 
+   <h1>Choose your Tool</h1>
+   <div class="playerinput">
+    <button class="">Rock</button>
+    <button class="">Paper</button>
+    <button class="">Scissors</button>
+   </div>
+   <div>
+    <h1>Computer choose</h1>
+    <button class="computerbox" style="cursor: none;">Loading...</button>
+   </div>
+   <div class="report">
+        <div class="infobox" id="Report" style="width: 700px;">
+            <h3>Round : <span id="RoundNo">0</span></h3>
+            <h3 style="font-size: 25px; margin-top: -5px;" id="RoundResult">Start the Round</h3>
+        </div>
+        <div class="infobox" id="scorecard" style="width: 300px;">
+            <h3 style="font-size: 25px; margin-top: 5px;">Player : <span id="playerScore">0</span></h3>
+            <h3 style="font-size: 25px; ">Computer : <span id="computerScore">0</span></h3>
+        </div>
+   </div>
+   <div class="report" id="result">
+    <div class="infobox" id="resultbox" style="width: 500px;">
+    <h2>
+        Loading your result...
+    </h2>
+    </div>
+   </div>
 </body>
 </html>

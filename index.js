@@ -5,13 +5,20 @@ function getComputerChoice() {
     return randomText;
 }
 
+function getPlayerChoice() {
+    var text = ["Rock", "Paper", "Scissor"];
+    var textIndex = Math.floor(Math.random() * text.length);
+    var randomText = text[textIndex];
+    return randomText;
+}
+
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return "Tie";
-    } else if (playerSelection === "Rock" && computerSelection === "Scissor") {
+    } else if (playerSelection === "Rock" && computerSelection === "Scissor" || playerSelection === "Paper" && computerSelection === "Rock" || playerSelection === "Sissor" && computerSelection === "Paper") {
         player += 1;
         return "You Won!, Rock beats Scissor";
-    } else if (playerSelection === "Rock" && computerSelection === "Paper") {
+    } else  {
         computer += 1;
         return "You Lose! Paper beats Rock";
     }
@@ -19,7 +26,7 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
     for (let i = 1; i <= 5; i++) {
-        const playerSelection = "Rock"; 
+        const playerSelection = getPlayerChoice(); 
         const computerSelection = getComputerChoice();
         console.log("Round" + ":" + i);
         console.log("playerSelection" + " : " + playerSelection);
@@ -42,4 +49,4 @@ function game() {
 let player = 0;
 let computer = 0;
 console.log(game());
-document.write(game());
+

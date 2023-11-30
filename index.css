@@ -1,0 +1,48 @@
+body{
+    background-color: burlywood;
+    text-align: center;
+}
+
+.Title{
+    font-size: 70px;
+    margin-top: -10px;
+}
+.playerinput{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    
+}
+button{
+    background-color: bisque;
+    height: 100px;
+    width: 300px;
+    border-radius: 10px;
+    border:2px solid black;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.report{
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+    
+}
+.report#result{
+    padding: 0;
+}
+.infobox{
+    height: 100px; 
+    background-color: bisque;
+    border-radius: 10px;
+    
+}
+#resultbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
