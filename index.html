@@ -27,16 +27,18 @@
         <div class="infobox" id="scorecard" style="width: 500px;">
             <h3 style="font-size: 25px; ">Player : <span id="playerScore">0 </span></h3>
             <h3 style="font-size: 25px; ">Computer : <span id="computerScore">0</span></h3>
+            <h3 style="font-size: 25px; ">Tie : <span id="tieScore">0 </span></h3>
         </div>
-        <div class="infobox" style="width: 200px; border: 0;">
-            <button onclick="NewGame()">Start New Game</button>
-        </div>
+        
    </div>
    <div class="report" id="result">
     <div class="infobox" id="resultbox" style="width: 500px;">
-    <h2 id="resultinfo">
-        Result of 5 Rounds
+    <h2 >
+        Winner of the match is : <span id="resultinfo">Loading...</span>
     </h2>
+    </div>
+    <div class="infobox" style="width: 200px; border: 0;">
+        <button onclick="NewGame()">Start New Game</button>
     </div>
    </div>
 </body>

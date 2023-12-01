@@ -1,13 +1,5 @@
 function NewGame(){
-    player=0;
-    computer=0;
-    const Roundno=0;
-    document.getElementById("computerSelected").innerHTML = "Loading....";
-    document.getElementById("RoundNo").innerHTML = Roundno;
-    document.getElementById("RoundResult").innerHTML = "Start the Round";
-    document.getElementById("playerScore").innerHTML = player;
-    document.getElementById("computerScore").innerHTML = computer;
-    document.getElementById("resultinfo").innerHTML = "Result of 5 Rounds";
+    location.reload()
 }
 
 function getComputerChoice() {
@@ -20,16 +12,22 @@ function getComputerChoice() {
     
 function playRound(PlayerChoice, computerSelection) {
         if (PlayerChoice === computerSelection) {
+            tie+=1
             return "Tie";  
         } 
         else if (
             (PlayerChoice === "Rock" && computerSelection === "Scissor") ||
             (PlayerChoice === "Paper" && computerSelection === "Rock") ||
             (PlayerChoice === "Scissor" && computerSelection === "Paper")
+            
         ) {
             player += 1;
             return "You Won! " + PlayerChoice + " beats " + computerSelection;
-        } else {
+        } else if(
+            (PlayerChoice === "Scissor" && computerSelection === "Rock") ||
+            (PlayerChoice === "Paper" && computerSelection === "Scissor") ||
+            (PlayerChoice === "Rock" && computerSelection === "Paper")
+        ){
             computer += 1;
             return "You Lose! " + computerSelection + " beats " + PlayerChoice;
         }
@@ -46,9 +44,9 @@ function game(PlayerChoice) {
     document.getElementById("RoundResult").innerHTML = roundResult;
     document.getElementById("playerScore").innerHTML = player;
     document.getElementById("computerScore").innerHTML = computer;
+    document.getElementById("tieScore").innerHTML = tie;
     
-    
-    if(Roundno == Roundlimit){
+    if(Roundno == Roundlimit || player == 3 || computer == 3){
         if (player >= 3 || player > computer) {
             document.getElementById("resultinfo").innerHTML = "Player wins";
         } else if (computer >= 3 || player < computer) {
@@ -63,6 +61,7 @@ function game(PlayerChoice) {
 
 let Roundlimit=5;
 let Roundno = 1;  
+let tie=0;
 let player = 0;
 let computer = 0;
 console.log(game());
