@@ -24,6 +24,10 @@ button{
     font-size: 30px;
 }
 
+button:hover{
+    background-color: burlywood ;
+}
+
 .report{
     display: flex;
     gap: 20px;
@@ -38,7 +42,15 @@ button{
     height: 100px; 
     background-color: bisque;
     border-radius: 10px;
+    border:2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px
     
+}
+#scorecard{
+    gap: 30px;
 }
 #resultbox{
     display: flex;
