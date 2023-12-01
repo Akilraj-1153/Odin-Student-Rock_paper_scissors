@@ -68,17 +68,6 @@ button:hover {
     color: #006400;
 }
 
-@media screen and (max-width: 600px) {
-    .playerinput {
-        flex-direction: column;
-    }
-
-    button {
-        width: 100%;
-    }
-
-    .report {
-        flex-direction: column;
-        padding: 10px;
-    }
+.report h3,.infobox h3,.infobox#RoundNo{
+    font-size: 25px;
 }
