@@ -46,12 +46,12 @@ function game(PlayerChoice) {
     document.getElementById("computerScore").innerHTML = computer;
     document.getElementById("tieScore").innerHTML = tie;
     
-    if(Roundno == Roundlimit || player == 3 || computer == 3){
-        if (player >= 3 || player > computer) {
+    if(Roundno == 5){
+        if (player >computer) {
             document.getElementById("resultinfo").innerHTML = "Player wins";
-        } else if (computer >= 3 || player < computer) {
+        } else if (computer > player ) {
             document.getElementById("resultinfo").innerHTML = "Computer Wins";
-        } else {
+        } else if(player === computer) {
             document.getElementById("resultinfo").innerHTML = "Tie";
         }
     }
